@@ -60,7 +60,7 @@ const useWebSocket = (patientId: string | null) => {
     if (!patientId) return;
 
     // Construct WebSocket URL (replace with your backend base URL)
-    const wsUrl = `ws://patientvitalbackend-production.up.railway.app/ws/patient/${patientId}/`;  // Use 'ws://' for local dev
+    const wsUrl = `wss://patientvitalbackend-production.up.railway.app/ws/patient/${patientId}/`;  // Use 'ws://' for local dev
 
     wsRef.current = new ReconnectingWebSocket(wsUrl);
 
